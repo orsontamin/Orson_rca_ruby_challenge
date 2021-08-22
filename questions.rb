@@ -53,11 +53,7 @@ end
 ########## Question 7 ############
 # Return true if sum of two numbers is more than 100, else false
 def more_than_100(num1, num2)
-  if num1 + num2 > 100
-    return true
-  else
-    return false
-  end
+  num1 + num2 > 100
 end
 
 ########## Question 8 ############
@@ -336,9 +332,7 @@ end
 ########## Question 46 ############
 # Word Spelling
 def word_spelling(word)
-  for i in word.length
-    y += i[i: i+ 1]
-  end
+
 end
 
 ########## Question 47 ############
