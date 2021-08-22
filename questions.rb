@@ -122,11 +122,7 @@ end
 # Return false if age is equal and above 18, when on break time
 # Return false if age is below 18
 def serve_drink(age, onBreak)
-  if(age >= 18 && !onBreak)
-    return true
-  else
-    return false
-  end
+  age >= 18 && !onBreak
 end
 
 ########## Question 18 ############
