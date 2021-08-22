@@ -297,10 +297,10 @@ end
 
 ########## Question 41 ############
 # Count each alphabet 'X', 'Y', 'Z' from a given string
-def calculate_alphabet(str)
+def calculate_alphabet(word)
   # arr = str.chars
   # arr.uniq.count {|n| arr.count(n) > 1}
-  str.partition {|i| i.length.even?}
+  word.chars.sort.tally.values
 end
 
 ########## Question 42 ############
