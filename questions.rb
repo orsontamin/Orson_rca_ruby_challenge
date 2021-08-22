@@ -312,42 +312,33 @@ end
 ########## Question 43 ############
 # Reverse words which have even length
 def reverse_even_words(str)
-  str.split.map {|word| word.reverse if word.length}.join(" ")
-  new_str = str.split
-  for i in new_str
-    if i.length % 2 == 0
-      rev_str = rev_str.append(i.reverse)
-    else
-      rev_str(i)
-    end
-  #str.split.map(&:reverse).join(" ")
-  end
-end
+  str.split.map {|elem|
+  if elem.length % 2 == 0 then elem.reverse else elem end}.join(" ")end
 
 ########## Question 44 ############
 # Sorting an array with 'asc', 'dsc', 'none'
 def sorting_an_array(arr, order)
   if order == 'dsc'
-    arr.sort {|x,y| -(x <=> y)}
+    arr.sort.reverse
   elsif order == 'asc'
-    arr.sort {|x,y| x <=> y}
+    arr.sort
+  else
+    arr
   end
 end
 
 ########## Question 45 ############
 # Return an array of index of small letter
 def index_of_small_letter(word)
-  for i in word.length
-    word[:i+1]
-  end
+  word.split("").map {|i| if i == i.downcase then word.index(i) end}.compact
 end
 
 ########## Question 46 ############
 # Word Spelling
 def word_spelling(word)
-  w = word.length
-  h = word.group_by{|x| x}
-  0.upto(word.length) {|x| puts h[x].length }
+  for i in word.length
+    y += i[i: i+ 1]
+  end
 end
 
 ########## Question 47 ############
