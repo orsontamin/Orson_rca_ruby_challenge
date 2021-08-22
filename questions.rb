@@ -290,8 +290,6 @@ end
 ########## Question 41 ############
 # Count each alphabet 'X', 'Y', 'Z' from a given string
 def calculate_alphabet(word)
-  # arr = str.chars
-  # arr.uniq.count {|n| arr.count(n) > 1}
   word.chars.sort.tally.values
 end
 
@@ -327,8 +325,12 @@ end
 
 ########## Question 46 ############
 # Word Spelling
+# Using recursive function
 def word_spelling(word)
-
+  return [] if word.size < 1
+    ((0..word.size-1).map do |pos|
+    word[0..pos]
+  end)
 end
 
 ########## Question 47 ############
